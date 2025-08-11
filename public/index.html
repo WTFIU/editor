@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Editor — Login</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main id="app">
+    <div id="login-page" class="panel">
+      <h1>Editor — Admin Login</h1>
+      <input id="password" type="password" placeholder="Admin password" />
+      <button id="login-btn">Login</button>
+      <p id="login-msg" class="muted"></p>
+    </div>
+
+    <div id="editor-page" class="hidden">
+      <header>
+        <h1>Structured JSON Editor</h1>
+        <div>
+          <button id="load-sample">Load Sample</button>
+          <input id="file-input" type="file" accept=".json" />
+          <button id="download-btn">Download data.json (UTF-8)</button>
+          <button id="logout-btn">Logout</button>
+        </div>
+      </header>
+
+      <section id="editor-controls" class="panel">
+        <p class="muted">Detected: <span id="detected-type">—</span></p>
+      </section>
+
+      <section id="editor-area" class="panel">
+        <!-- Table or key/value editor will be inserted here -->
+      </section>
+
+      <footer class="panel muted">
+        <small>Edits are saved by downloading a UTF-8 file. To push changes to your repo, replace data.json there.</small>
+      </footer>
+    </div>
+  </main>
+
+  <script type="module" src="hash.js"></script>
+  <script type="module" src="auth.js"></script>
+  <script type="module" src="editor.js"></script>
+</body>
+</html>
